@@ -43,6 +43,22 @@ public class MainActivity extends BaseActivity {
         }
         GankAdapter gankAdapter = new GankAdapter(getSupportFragmentManager());
         mVPContent.setAdapter(gankAdapter);
+        mVPContent.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                mTabLayout.setCurrentTab(position);
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
 
         mTabLayout.setTabData(mTabEntities);
         mTabLayout.setOnTabSelectListener(new OnTabSelectListener() {
