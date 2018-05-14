@@ -10,7 +10,7 @@ import com.brandlee.anonymous.R;
  */
 
 public class Constant {
-    public static String[] sTabTitles = {"Daily", "Sort", "Bonus", "About"};
-    public static int[] mIconUnselectIds = {R.drawable.icon_tab_today, R.drawable.icon_tab_sort, R.drawable.icon_tab_photo, R.drawable.icon_tab_identity};
-    public static int[] mIconSelectIds = {R.drawable.icon_tab_today_pressed, R.drawable.icon_tab_sort_pressed, R.drawable.icon_tab_photo_pressed, R.drawable.icon_tab_identity_pressed};
+    public static String[] sTabTitles = {"首页", "订单", "我的"};
+    public static int[] mIconUnselectIds = {R.drawable.icon_tab_today, R.drawable.icon_tab_sort, R.drawable.icon_tab_identity};
+    public static int[] mIconSelectIds = {R.drawable.icon_tab_today_pressed, R.drawable.icon_tab_sort_pressed, R.drawable.icon_tab_identity_pressed};
 }

@@ -5,7 +5,6 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 import com.brandlee.anonymous.sections.about.AboutFragment;
-import com.brandlee.anonymous.sections.bonus.BonusFragment;
 import com.brandlee.anonymous.sections.daily.DailyFragment;
 import com.brandlee.anonymous.sections.sort.SortFragment;
 import com.brandlee.anonymous.utils.Constant;
@@ -30,8 +29,6 @@ public class GankAdapter extends FragmentPagerAdapter {
             case 1:
                 return SortFragment.newInstance("", "");
             case 2:
-                return BonusFragment.newInstance("", "");
-            case 3:
                 return AboutFragment.newInstance("", "");
             default:
                 return null;
