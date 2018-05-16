@@ -38,7 +38,6 @@ dependencies {
     compile 'com.jakewharton:butterknife-compiler:8.5.1'
     compile 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
     compile "com.android.support:support-v4:$rootProject.supportLibraryVersion"
-    testCompile 'junit:junit:4.12'
     compile project(':leenetwork')
     compile project(':leeadapter')
     compile project(':leeimageloader')

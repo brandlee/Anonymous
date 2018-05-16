@@ -8,4 +8,8 @@
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
     <color name="bg_light_gray">#f2f2f2</color>
+    <color name="select_tab_text">#3D93D0</color>
+    <color name="blue_border">#FF61A2DC</color>
+    <color name="unselect_tab_text">#757575</color>
+    <color name="text_ignore">#999999</color>
 </resources>

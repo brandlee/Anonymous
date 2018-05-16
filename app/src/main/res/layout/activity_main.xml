@@ -1,19 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.brandlee.anonymous.sections.main.MainActivity">
+    android:orientation="vertical">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPrimary" />
-
-    <android.support.v4.view.ViewPager
+    <com.brandlee.anonymous.common.widget.SlidableViewPager
         android:id="@+id/vp_content"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -23,7 +15,9 @@
         android:id="@+id/tab_layout"
         android:layout_width="match_parent"
         android:layout_height="54dp"
-        android:background="@color/colorPrimaryDark"
+        android:background="@color/white"
         app:tl_indicator_height="0dp"
+        app:tl_textSelectColor="@color/select_tab_text"
+        app:tl_textUnselectColor="@color/unselect_tab_text"
         app:tl_textsize="12sp" />
 </LinearLayout>

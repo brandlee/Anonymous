@@ -2,10 +2,10 @@ package com.brandlee.anonymous.sections.main;
 
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
-import android.support.v7.widget.Toolbar;
 
 import com.brandlee.anonymous.R;
 import com.brandlee.anonymous.common.BaseActivity;
+import com.brandlee.anonymous.common.widget.SlidableViewPager;
 import com.flyco.tablayout.CommonTabLayout;
 import com.flyco.tablayout.listener.CustomTabEntity;
 import com.flyco.tablayout.listener.OnTabSelectListener;
@@ -19,10 +19,8 @@ import static com.brandlee.anonymous.utils.Constant.mIconUnselectIds;
 import static com.brandlee.anonymous.utils.Constant.sTabTitles;
 
 public class MainActivity extends BaseActivity {
-    @BindView(R.id.toolbar)
-    Toolbar mToolbar;
     @BindView(R.id.vp_content)
-    ViewPager mVPContent;
+    SlidableViewPager mVPContent;
     @BindView(R.id.tab_layout)
     CommonTabLayout mTabLayout;
 
@@ -33,7 +31,6 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        setSupportActionBar(mToolbar);
         initTabs();
     }
 

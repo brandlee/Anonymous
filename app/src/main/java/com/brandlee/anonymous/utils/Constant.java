@@ -11,6 +11,6 @@ import com.brandlee.anonymous.R;
 
 public class Constant {
     public static String[] sTabTitles = {"首页", "订单", "我的"};
-    public static int[] mIconUnselectIds = {R.drawable.icon_tab_today, R.drawable.icon_tab_sort, R.drawable.icon_tab_identity};
-    public static int[] mIconSelectIds = {R.drawable.icon_tab_today_pressed, R.drawable.icon_tab_sort_pressed, R.drawable.icon_tab_identity_pressed};
+    public static int[] mIconUnselectIds = {R.drawable.icon_tab_home, R.drawable.icon_tab_order, R.drawable.icon_tab_user};
+    public static int[] mIconSelectIds = {R.drawable.icon_tab_home_pressed, R.drawable.icon_tab_order_pressed, R.drawable.icon_tab_user_pressed};
 }
