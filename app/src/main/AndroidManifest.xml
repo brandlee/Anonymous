@@ -21,6 +21,10 @@
         <activity
             android:name=".sections.setting.SettingActivity"
             android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".sections.order.OrderDetailActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

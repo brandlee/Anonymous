@@ -1,4 +1,4 @@
-package com.brandlee.anonymous.sections.sort;
+package com.brandlee.anonymous.sections.order;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -9,7 +9,10 @@ import android.view.ViewGroup;
 
 import com.brandlee.anonymous.R;
 import com.brandlee.anonymous.common.BaseToolbarWrapper;
+import com.brandlee.anonymous.common.viewpager.CommonPagerAdapter;
+import com.brandlee.anonymous.common.viewpager.PagerManager;
 import com.brandlee.anonymous.common.widget.SlidableViewPager;
+import com.brandlee.anonymous.entities.OrderEntity;
 import com.flyco.tablayout.SlidingTabLayout;
 
 public class OrderFragment extends Fragment {
@@ -22,9 +25,14 @@ public class OrderFragment extends Fragment {
     private BaseToolbarWrapper mToolbar;
     private SlidingTabLayout mTabLayout;
     private SlidableViewPager mViewPager;
+    private PagerManager mPagerManager;
+    private CommonPagerAdapter mPagerAdapter;
+
+    private final String[] mTitles = {
+            "待确认", "待支付", "已完成", "全部"
+    };
 
     public OrderFragment() {
-        // Required empty public constructor
     }
 
     public static OrderFragment newInstance(String param1, String param2) {
@@ -61,5 +69,18 @@ public class OrderFragment extends Fragment {
 
         mTabLayout = view.findViewById(R.id.tab_layout);
         mViewPager = view.findViewById(R.id.viewpager);
+
+        initViewPager();
+    }
+
+    private void initViewPager() {
+        mPagerManager = new PagerManager();
+        mPagerManager.addFragment(OrderListFragment.newInstance(OrderEntity.TYPE_WAIT_CONFIRM, ""), mTitles[0]);
+        mPagerManager.addFragment(OrderListFragment.newInstance(OrderEntity.TYPE_WAIT_PAY, ""), mTitles[1]);
+        mPagerManager.addFragment(OrderListFragment.newInstance(OrderEntity.TYPE_COMPLETE, ""), mTitles[2]);
+        mPagerManager.addFragment(OrderListFragment.newInstance(OrderEntity.TYPE_ALL, ""), mTitles[3]);
+        mPagerAdapter = new CommonPagerAdapter(getChildFragmentManager(), mPagerManager);
+        mViewPager.setAdapter(mPagerAdapter);
+        mTabLayout.setViewPager(mViewPager);
     }
 }

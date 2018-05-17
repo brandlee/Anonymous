@@ -6,7 +6,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 import com.brandlee.anonymous.sections.about.AboutFragment;
 import com.brandlee.anonymous.sections.daily.MainFragment;
-import com.brandlee.anonymous.sections.sort.OrderFragment;
+import com.brandlee.anonymous.sections.order.OrderFragment;
 import com.brandlee.anonymous.utils.Constant;
 
 /**

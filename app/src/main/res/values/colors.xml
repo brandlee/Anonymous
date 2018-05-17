@@ -12,4 +12,5 @@
     <color name="blue_border">#FF61A2DC</color>
     <color name="unselect_tab_text">#757575</color>
     <color name="text_ignore">#999999</color>
+    <color name="light_gray">#F5F5F5</color>
 </resources>

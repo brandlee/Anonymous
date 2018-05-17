@@ -1,1 +1,1 @@
-include ':app', ':leenetwork', ':leeadapter', ':leeimageloader'
+include ':app', ':leenetwork', ':leeimageloader'
