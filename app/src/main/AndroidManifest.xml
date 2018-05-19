@@ -3,6 +3,7 @@
     package="com.brandlee.anonymous">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:allowBackup="true"
@@ -24,6 +25,14 @@
 
         <activity
             android:name=".sections.order.OrderDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".sections.order.PayDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".sections.order.PayActivity"
             android:screenOrientation="portrait" />
     </application>
 

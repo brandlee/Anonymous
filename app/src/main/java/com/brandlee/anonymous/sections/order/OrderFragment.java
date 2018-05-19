@@ -66,6 +66,7 @@ public class OrderFragment extends Fragment {
 
         mToolbar = new BaseToolbarWrapper(view.findViewById(R.id.toolbar));
         mToolbar.setTitle("订单");
+        mToolbar.viewLeft.setVisibility(View.INVISIBLE);
 
         mTabLayout = view.findViewById(R.id.tab_layout);
         mViewPager = view.findViewById(R.id.viewpager);

@@ -49,11 +49,30 @@ public class OrderListFragment extends Fragment {
         }
 
         mOrderList = new ArrayList<>();
-        if (mOrderType != OrderEntity.TYPE_WAIT_CONFIRM) {
+        if (mOrderType == OrderEntity.TYPE_WAIT_CONFIRM) {
+            mOrderList.add(new OrderEntity(mOrderType));
+            mOrderList.add(new OrderEntity(mOrderType));
+            mOrderList.add(new OrderEntity(mOrderType));
+        } else if (mOrderType == OrderEntity.TYPE_WAIT_PAY) {
             mOrderList.add(new OrderEntity(mOrderType));
             mOrderList.add(new OrderEntity(mOrderType));
             mOrderList.add(new OrderEntity(mOrderType));
             mOrderList.add(new OrderEntity(mOrderType));
+        } else if (mOrderType == OrderEntity.TYPE_COMPLETE) {
+            mOrderList.add(new OrderEntity(mOrderType));
+            mOrderList.add(new OrderEntity(mOrderType));
+            mOrderList.add(new OrderEntity(mOrderType));
+        } else if (mOrderType == OrderEntity.TYPE_ALL) {
+            mOrderList.add(new OrderEntity(OrderEntity.TYPE_WAIT_CONFIRM));
+            mOrderList.add(new OrderEntity(OrderEntity.TYPE_WAIT_CONFIRM));
+            mOrderList.add(new OrderEntity(OrderEntity.TYPE_WAIT_CONFIRM));
+            mOrderList.add(new OrderEntity(OrderEntity.TYPE_WAIT_PAY));
+            mOrderList.add(new OrderEntity(OrderEntity.TYPE_WAIT_PAY));
+            mOrderList.add(new OrderEntity(OrderEntity.TYPE_WAIT_PAY));
+            mOrderList.add(new OrderEntity(OrderEntity.TYPE_WAIT_PAY));
+            mOrderList.add(new OrderEntity(OrderEntity.TYPE_COMPLETE));
+            mOrderList.add(new OrderEntity(OrderEntity.TYPE_COMPLETE));
+            mOrderList.add(new OrderEntity(OrderEntity.TYPE_COMPLETE));
         }
     }
 
@@ -83,13 +102,13 @@ public class OrderListFragment extends Fragment {
     }
 
     private void initData() {
-        if (mOrderType == OrderEntity.TYPE_WAIT_CONFIRM) {
-            mEmptyText.setVisibility(View.VISIBLE);
-            mRecyclerView.setVisibility(View.GONE);
-        } else {
-            mEmptyText.setVisibility(View.GONE);
-            mRecyclerView.setVisibility(View.VISIBLE);
-            mAdapter.refreshData(mOrderList);
-        }
+//        if (mOrderType == OrderEntity.TYPE_WAIT_CONFIRM) {
+//            mEmptyText.setVisibility(View.VISIBLE);
+//            mRecyclerView.setVisibility(View.GONE);
+//        } else {
+        mEmptyText.setVisibility(View.GONE);
+        mRecyclerView.setVisibility(View.VISIBLE);
+        mAdapter.refreshData(mOrderList);
+//        }
     }
 }

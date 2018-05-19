@@ -17,7 +17,7 @@
         <TextView
             android:layout_width="56dp"
             android:layout_height="20dp"
-            android:background="@drawable/shape_blue_solid_radius_2"
+            android:background="@drawable/shape_dark_gray_solid_radius_2"
             android:gravity="center"
             android:includeFontPadding="false"
             android:text="食品订单"
@@ -31,7 +31,8 @@
             android:includeFontPadding="false"
             android:text="汇源果汁泰安分公司"
             android:textColor="#FF3D93D0"
-            android:textSize="12sp" />
+            android:textSize="12sp"
+            android:visibility="gone" />
 
         <android.support.v4.widget.Space
             android:layout_width="0dp"
@@ -43,8 +44,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:includeFontPadding="false"
-            android:text="待确认"
-            android:textColor="#FF3D93D0"
+            android:text="已完成"
+            android:textColor="#FF9B9B9B"
             android:textSize="14sp" />
     </LinearLayout>
 
@@ -54,7 +55,7 @@
         android:layout_marginTop="10dp"
         android:includeFontPadding="false"
         android:text="3000.00"
-        android:textColor="#FF212121"
+        android:textColor="#FF9B9B9B"
         android:textSize="20sp" />
 
     <LinearLayout
@@ -78,12 +79,12 @@
             android:layout_weight="1" />
 
         <TextView
-            android:id="@+id/tv_due"
+            android:id="@+id/tv_due_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:includeFontPadding="false"
-            android:text="剩余23天到期"
-            android:textColor="#FFEE001D"
+            android:text="2018.07.01完成"
+            android:textColor="#FFBDBDBD"
             android:textSize="12sp" />
     </LinearLayout>
 
@@ -103,7 +104,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="2018.06.23下单"
-            android:textColor="#FF212121"
+            android:textColor="#FF9B9B9B"
             android:textSize="14sp" />
 
         <android.support.v4.widget.Space
@@ -112,11 +113,10 @@
             android:layout_weight="1" />
 
         <TextView
-            android:id="@+id/tv_due_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="2018.09.24到期"
-            android:textColor="#FF212121"
+            android:textColor="#FF9B9B9B"
             android:textSize="14sp" />
     </LinearLayout>
 </LinearLayout>

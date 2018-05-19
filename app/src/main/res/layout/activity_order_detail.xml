@@ -6,109 +6,115 @@
 
     <include layout="@layout/layout_toolbar_normal" />
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="64dp"
-        android:background="#FF3D93D0"
-        android:gravity="center_vertical">
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:background="#FF3D93D0"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:drawableLeft="@drawable/icon_order_detail_shop"
+                    android:drawablePadding="10dp"
+                    android:text="明静商店"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <include
+                layout="@layout/layout_unfinished_order"
+                android:visibility="gone" />
+
+            <include
+                layout="@layout/layout_confirm_order"
+                android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_contract"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp">
+
+        <CheckBox
+            android:id="@+id/cb_user_agreement"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:background="@drawable/bg_login_checkbox"
+            android:button="@null"
+            android:checked="true" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:drawableLeft="@drawable/icon_order_detail_shop"
-            android:drawablePadding="10dp"
-            android:text="明静商店"
-            android:textColor="#FFFFFFFF"
-            android:textSize="16sp" />
-    </LinearLayout>
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="1dp"
+            android:layout_marginLeft="3dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:text="我已阅读并同意"
+            android:textColor="#FF212121"
+            android:textSize="@dimen/font_small" />
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#FF3D93D0"
-            android:orientation="vertical"
-            android:paddingBottom="14dp"
-            android:paddingLeft="16dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:baselineAligned="false"
-                android:gravity="center_vertical"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="3000.00"
-                        android:textColor="#FFFFFFFF"
-                        android:textSize="20sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="待支付金额(元）"
-                        android:textColor="#FFFFFFFF"
-                        android:textSize="12sp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="91"
-                        android:textColor="#FFFFFFFF"
-                        android:textSize="20sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="计息天数(天)"
-                        android:textColor="#FFFFFFFF"
-                        android:textSize="12sp" />
-                </LinearLayout>
-
-
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="18dp"
-                android:text="开始计息日期  2018.01.01"
-                android:textColor="#FFFFFFFF"
-                android:textSize="12sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:text="完成时间  2018.03.01"
-                android:textColor="#FFFFFFFF"
-                android:textSize="12sp" />
-        </LinearLayout>
-
-        <ImageView
+        <TextView
+            android:id="@+id/tv_user_agreement"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom|right"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="1dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:text="《应收账款转让协议》"
+            android:textColor="#FF3D93D0"
+            android:textSize="@dimen/font_small" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp">
+
+        <TextView
+            android:id="@+id/tv_pay_detail"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="16dp"
             android:layout_marginRight="10dp"
-            android:src="@drawable/icon_order_not_complete" />
-    </FrameLayout>
+            android:layout_weight="1"
+            android:background="@drawable/shape_black_border_radius_2"
+            android:gravity="center"
+            android:text="支付明细"
+            android:textColor="#FF212121"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_confirm"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_blue_border_radius_2"
+            android:gravity="center"
+            android:text="确认"
+            android:textColor="#FF3D93D0"
+            android:textSize="15sp" />
+    </LinearLayout>
 </LinearLayout>
