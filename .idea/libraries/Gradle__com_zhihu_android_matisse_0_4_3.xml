@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.zhihu.android:matisse-0.4.3">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.android/build-cache/8467d278a6f66fb848210a029458a6129236c47f/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/8467d278a6f66fb848210a029458a6129236c47f/output/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.zhihu.android/matisse/0.4.3/904cfb8603c398d6cece784e71ad7c25bc1ac262/matisse-0.4.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

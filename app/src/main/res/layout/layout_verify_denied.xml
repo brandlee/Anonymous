@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        android:drawablePadding="6dp"
+        android:drawableTop="@drawable/icon_verify_denied"
+        android:gravity="center"
+        android:text="审核未通过"
+        android:textColor="#FF212121"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="50dp"
+        android:layout_marginTop="4dp"
+        android:text="若有任何疑问，请联系您的客户经理"
+        android:textColor="#FF9B9B9B"
+        android:textSize="12sp" />
+</LinearLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="48dp"
+        android:drawablePadding="4dp"
+        android:drawableTop="@drawable/icon_credit_manager_wait_for_verify"
+        android:text="审核会在成功签署协议后的3个工作日内完成"
+        android:textColor="#FF9B9B9B"
+        android:textSize="12sp" />
+</LinearLayout>

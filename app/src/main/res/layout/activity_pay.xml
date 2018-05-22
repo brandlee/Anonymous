@@ -8,7 +8,7 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="1dp"
+        android:layout_height="0.5dp"
         android:background="#b3b3b3" />
 
     <TextView
@@ -50,10 +50,14 @@
             android:layout_weight="1"
             android:background="@null"
             android:hint=""
+            android:inputType="numberDecimal"
+            android:maxLength="8"
             android:textColor="#FF212121"
+            android:textCursorDrawable="@null"
             android:textSize="20sp" />
 
         <TextView
+            android:id="@+id/tv_all_money"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingBottom="4dp"
@@ -104,6 +108,7 @@
     </LinearLayout>
 
     <TextView
+        android:id="@+id/tv_to_pay"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"

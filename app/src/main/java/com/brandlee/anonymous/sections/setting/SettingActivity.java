@@ -2,9 +2,11 @@ package com.brandlee.anonymous.sections.setting;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.view.View;
 
 import com.brandlee.anonymous.R;
 import com.brandlee.anonymous.common.BaseActivity;
+import com.brandlee.anonymous.common.BaseToolbarWrapper;
 
 /**
  * @Description:
@@ -12,9 +14,25 @@ import com.brandlee.anonymous.common.BaseActivity;
  * @Date: 2018/05/14 2207
  */
 public class SettingActivity extends BaseActivity {
+    private BaseToolbarWrapper mToolbar;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setting);
+
+        initToolbar();
+    }
+
+    private void initToolbar() {
+        mToolbar = new BaseToolbarWrapper(findViewById(R.id.toolbar));
+        mToolbar.setTitle("设置");
+        mToolbar.viewRight.setVisibility(View.GONE);
+        mToolbar.viewLeft.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 }

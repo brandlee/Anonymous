@@ -55,6 +55,7 @@
                 android:textSize="20sp" />
 
             <TextView
+                android:id="@+id/tv_to_see"
                 android:layout_width="120dp"
                 android:layout_height="32dp"
                 android:layout_marginLeft="20dp"
@@ -113,20 +114,21 @@
         android:background="#FFFAFAFA" />
 
     <LinearLayout
+        android:id="@+id/ll_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:orientation="vertical">
+        android:orientation="vertical" />
 
-        <include layout="@layout/layout_home_order" />
+    <android.support.v4.widget.Space
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0.5px"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:background="#FFE0E0E0" />
-
-        <include layout="@layout/layout_home_order" />
-    </LinearLayout>
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="14dp"
+        android:src="@drawable/icon_bottom_logo" />
 </LinearLayout>

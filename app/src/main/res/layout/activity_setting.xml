@@ -5,6 +5,13 @@
     android:background="@color/white"
     android:orientation="vertical">
 
+    <include layout="@layout/layout_toolbar_normal" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#b3b3b3" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -157,5 +164,16 @@
         android:layout_marginRight="12dp"
         android:background="#FFE0E0E0" />
 
-
+    <TextView
+        android:id="@+id/tv_logout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/shape_blue_solid_radius_2"
+        android:gravity="center"
+        android:text="退出当前账号"
+        android:textColor="#FFFFFFFF"
+        android:textSize="16sp" />
 </LinearLayout>
