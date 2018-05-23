@@ -14,7 +14,7 @@
         android:clipToPadding="false"
         app:tl_indicator_color="#FF212121"
         app:tl_indicator_height="2dp"
-        app:tl_indicator_width_equal_title="true"
+        app:tl_indicator_width_equal_title="false"
         app:tl_tab_space_equal="true"
         app:tl_textSelectColor="#FF212121"
         app:tl_textUnselectColor="#FF757575"

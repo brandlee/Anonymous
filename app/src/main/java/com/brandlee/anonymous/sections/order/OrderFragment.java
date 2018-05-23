@@ -83,5 +83,7 @@ public class OrderFragment extends Fragment {
         mPagerAdapter = new CommonPagerAdapter(getChildFragmentManager(), mPagerManager);
         mViewPager.setAdapter(mPagerAdapter);
         mTabLayout.setViewPager(mViewPager);
+
+        mTabLayout.showDot(1);
     }
 }

@@ -43,4 +43,5 @@ dependencies {
     compile project(':leeimageloader')
 
     compile 'com.zhihu.android:matisse:0.4.3'
+    compile 'com.jzxiang.pickerview:TimePickerDialog:1.0.1'
 }

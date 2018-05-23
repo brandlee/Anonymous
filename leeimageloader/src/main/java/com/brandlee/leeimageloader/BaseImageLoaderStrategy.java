@@ -1,5 +1,6 @@
 package com.brandlee.leeimageloader;
 
+import android.net.Uri;
 import android.support.annotation.IdRes;
 import android.widget.ImageView;
 
@@ -18,6 +19,14 @@ public interface BaseImageLoaderStrategy {
      * @param url
      */
     void loadImage(ImageView imageView, String url);
+
+    /**
+     * 加载图片无占位图
+     *
+     * @param imageView
+     * @param uri
+     */
+    void loadImage(ImageView imageView, Uri uri);
 
     /**
      * 加载图片有占位图

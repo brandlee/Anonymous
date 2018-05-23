@@ -36,7 +36,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="王二"
-            android:textColor="#FF212121"
+            android:textColor="#FFBDBDBD"
             android:textSize="14sp" />
     </LinearLayout>
 
@@ -112,7 +112,7 @@
             android:includeFontPadding="false"
             android:padding="16dp"
             android:text="请选择"
-            android:textColor="#FFBDBDBD"
+            android:textColor="#FF212121"
             android:textSize="14sp" />
     </LinearLayout>
 
@@ -156,7 +156,8 @@
                     android:id="@+id/iv_positive_id_card"
                     android:layout_width="110dp"
                     android:layout_height="110dp"
-                    android:background="@drawable/shape_gray_border_radius_0" />
+                    android:background="@drawable/shape_gray_border_radius_0"
+                    android:scaleType="fitCenter" />
             </FrameLayout>
 
             <TextView
@@ -187,18 +188,27 @@
             android:gravity="center"
             android:orientation="vertical">
 
-            <LinearLayout
+            <FrameLayout
                 android:layout_width="110dp"
                 android:layout_height="110dp"
                 android:background="@drawable/shape_gray_border_radius_0"
-                android:gravity="center"
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:id="@+id/iv_add_negative_id_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:scaleType="centerInside"
                     android:src="@drawable/icon_add" />
-            </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/iv_negative_id_card"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:background="@drawable/shape_gray_border_radius_0"
+                    android:scaleType="fitCenter" />
+            </FrameLayout>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -228,18 +238,27 @@
             android:gravity="center"
             android:orientation="vertical">
 
-            <LinearLayout
+            <FrameLayout
                 android:layout_width="110dp"
                 android:layout_height="110dp"
                 android:background="@drawable/shape_gray_border_radius_0"
-                android:gravity="center"
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:id="@+id/iv_add_hold_id_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:scaleType="centerInside"
                     android:src="@drawable/icon_add" />
-            </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/iv_hold_id_card"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:background="@drawable/shape_gray_border_radius_0"
+                    android:scaleType="fitCenter" />
+            </FrameLayout>
 
             <TextView
                 android:layout_width="wrap_content"

@@ -76,7 +76,7 @@
                     android:layout_weight="1" />
 
                 <TextView
-                    android:id="@+id/tv_relation"
+                    android:id="@+id/tv_time_picker"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:drawableRight="@drawable/icon_arrow_right_small"
@@ -213,24 +213,33 @@
                 android:paddingTop="16dp">
 
                 <LinearLayout
-                    android:id="@+id/ll_positive_id_card"
+                    android:id="@+id/ll_yan_cao_card"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:orientation="vertical">
 
-                    <LinearLayout
+                    <FrameLayout
                         android:layout_width="110dp"
                         android:layout_height="110dp"
                         android:background="@drawable/shape_gray_border_radius_0"
-                        android:gravity="center"
                         android:orientation="horizontal">
 
                         <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:id="@+id/iv_add_yan_cao_card"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:scaleType="centerInside"
                             android:src="@drawable/icon_add" />
-                    </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/iv_yan_cao_card"
+                            android:layout_width="110dp"
+                            android:layout_height="110dp"
+                            android:background="@drawable/shape_gray_border_radius_0"
+                            android:scaleType="fitCenter" />
+                    </FrameLayout>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -254,24 +263,33 @@
                     android:layout_weight="1" />
 
                 <LinearLayout
-                    android:id="@+id/ll_negative_id_card"
+                    android:id="@+id/ll_dian_nei_card"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:orientation="vertical">
 
-                    <LinearLayout
+                    <FrameLayout
                         android:layout_width="110dp"
                         android:layout_height="110dp"
                         android:background="@drawable/shape_gray_border_radius_0"
-                        android:gravity="center"
                         android:orientation="horizontal">
 
                         <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:id="@+id/iv_add_dian_nei_card"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:scaleType="centerInside"
                             android:src="@drawable/icon_add" />
-                    </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/iv_dian_nei_card"
+                            android:layout_width="110dp"
+                            android:layout_height="110dp"
+                            android:background="@drawable/shape_gray_border_radius_0"
+                            android:scaleType="fitCenter" />
+                    </FrameLayout>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -295,24 +313,33 @@
                     android:layout_weight="1" />
 
                 <LinearLayout
-                    android:id="@+id/ll_hand_id_card"
+                    android:id="@+id/ll_dian_wai_card"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:orientation="vertical">
 
-                    <LinearLayout
+                    <FrameLayout
                         android:layout_width="110dp"
                         android:layout_height="110dp"
                         android:background="@drawable/shape_gray_border_radius_0"
-                        android:gravity="center"
                         android:orientation="horizontal">
 
                         <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:id="@+id/iv_add_dian_wai_card"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:scaleType="centerInside"
                             android:src="@drawable/icon_add" />
-                    </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/iv_dian_wai_card"
+                            android:layout_width="110dp"
+                            android:layout_height="110dp"
+                            android:background="@drawable/shape_gray_border_radius_0"
+                            android:scaleType="fitCenter" />
+                    </FrameLayout>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -332,6 +359,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/ll_ying_ye_card"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
@@ -340,18 +368,27 @@
                 android:gravity="center"
                 android:orientation="vertical">
 
-                <LinearLayout
+                <FrameLayout
                     android:layout_width="110dp"
                     android:layout_height="110dp"
                     android:background="@drawable/shape_gray_border_radius_0"
-                    android:gravity="center"
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:id="@+id/iv_add_ying_ye_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:scaleType="centerInside"
                         android:src="@drawable/icon_add" />
-                </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/iv_ying_ye_card"
+                        android:layout_width="110dp"
+                        android:layout_height="110dp"
+                        android:background="@drawable/shape_gray_border_radius_0"
+                        android:scaleType="fitCenter" />
+                </FrameLayout>
 
                 <TextView
                     android:layout_width="wrap_content"

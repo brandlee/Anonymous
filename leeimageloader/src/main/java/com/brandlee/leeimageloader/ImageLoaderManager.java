@@ -1,5 +1,6 @@
 package com.brandlee.leeimageloader;
 
+import android.net.Uri;
 import android.support.annotation.IdRes;
 import android.widget.ImageView;
 
@@ -38,6 +39,11 @@ public class ImageLoaderManager implements BaseImageLoaderStrategy {
     @Override
     public void loadImage(ImageView imageView, String url) {
         imageLoaderStrategy.loadImage(imageView, url);
+    }
+
+    @Override
+    public void loadImage(ImageView imageView, Uri uri) {
+        imageLoaderStrategy.loadImage(imageView, uri);
     }
 
     @Override

@@ -13,6 +13,7 @@
         android:background="#b3b3b3" />
 
     <LinearLayout
+        android:id="@+id/ll_change_login_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/bg_item_selector"
@@ -51,6 +52,7 @@
         android:background="#FFE0E0E0" />
 
     <LinearLayout
+        android:id="@+id/ll_change_login_phone_number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/bg_item_selector"
@@ -89,6 +91,7 @@
         android:background="#FFE0E0E0" />
 
     <LinearLayout
+        android:id="@+id/ll_change_pay_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/bg_item_selector"
@@ -127,6 +130,7 @@
         android:background="#FFE0E0E0" />
 
     <LinearLayout
+        android:id="@+id/ll_auth"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/bg_item_selector"

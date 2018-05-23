@@ -5,7 +5,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.brandlee.anonymous.R;
 import com.brandlee.anonymous.common.BaseActivity;
@@ -30,6 +32,8 @@ public class OrderDetailActivity extends BaseActivity {
     private TextView mPayDetailTextView;
     private TextView mConfirmTextView;
 
+    private LinearLayout ll_contract;
+
     private int orderType;
 
     @Override
@@ -47,13 +51,21 @@ public class OrderDetailActivity extends BaseActivity {
 
         mUnfinishedOrderLayout = findViewById(R.id.layout_unfinished_order);
         mConfirmOrderLayout = findViewById(R.id.layout_confirm_order);
-        mUnfinishedOrderWrapper = new UnfinishedOrderWrapper(mUnfinishedOrderLayout);
+        mUnfinishedOrderWrapper = new UnfinishedOrderWrapper(mUnfinishedOrderLayout, orderType);
         mConfirmOrderWrapper = new ConfirmOrderWrapper(mConfirmOrderLayout);
+
+        ll_contract = findViewById(R.id.ll_contract);
 
         if (orderType == OrderEntity.TYPE_WAIT_CONFIRM) {
             mConfirmOrderLayout.setVisibility(View.VISIBLE);
         } else {
             mUnfinishedOrderLayout.setVisibility(View.VISIBLE);
+            ll_contract.setVisibility(View.GONE);
+        }
+
+        if (orderType == OrderEntity.TYPE_COMPLETE) {
+            mConfirmTextView.setText("支付");
+            mConfirmTextView.setVisibility(View.GONE);
         }
     }
 
@@ -78,7 +90,13 @@ public class OrderDetailActivity extends BaseActivity {
         mConfirmTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(OrderDetailActivity.this, PayActivity.class));
+                if (orderType == OrderEntity.TYPE_WAIT_CONFIRM) {
+                    Toast.makeText(OrderDetailActivity.this, "确认成功", Toast.LENGTH_SHORT).show();
+                    finish();
+                } else {
+
+                    startActivity(new Intent(OrderDetailActivity.this, PayActivity.class));
+                }
             }
         });
 
@@ -97,8 +115,10 @@ public class OrderDetailActivity extends BaseActivity {
     private void initToolbar() {
         mToolbar = new BaseToolbarWrapper(findViewById(R.id.toolbar));
         mToolbar.setTitle("订单详情");
-        mToolbar.viewRight.setVisibility(View.VISIBLE);
-        mToolbar.tvRight.setText("查看协议");
+        if (orderType != OrderEntity.TYPE_WAIT_CONFIRM) {
+            mToolbar.viewRight.setVisibility(View.VISIBLE);
+            mToolbar.tvRight.setText("查看协议");
+        }
         mToolbar.viewLeft.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

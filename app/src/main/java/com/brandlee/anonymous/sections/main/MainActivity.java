@@ -6,6 +6,8 @@ import android.support.v4.view.ViewPager;
 import com.brandlee.anonymous.R;
 import com.brandlee.anonymous.common.BaseActivity;
 import com.brandlee.anonymous.common.widget.SlidableViewPager;
+import com.brandlee.leeimageloader.GlideImageLoaderStrategy;
+import com.brandlee.leeimageloader.ImageLoaderManager;
 import com.flyco.tablayout.CommonTabLayout;
 import com.flyco.tablayout.listener.CustomTabEntity;
 import com.flyco.tablayout.listener.OnTabSelectListener;
@@ -30,6 +32,8 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ImageLoaderManager.getInstance().setImageLoaderStrategy(new GlideImageLoaderStrategy());
 
         initTabs();
     }

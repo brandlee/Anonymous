@@ -26,6 +26,30 @@
             android:screenOrientation="portrait" />
 
         <activity
+            android:name=".sections.setting.ChangeLoginPhoneNumberActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".sections.setting.ChangeLoginPhoneNumberStepTwoActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".sections.setting.ChangeLoginPasswordActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".sections.setting.ChangeLoginPasswordStepTwoActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".sections.setting.ChangePayPasswordActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".sections.setting.ChangePayPasswordStepTwoActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
             android:name=".sections.order.OrderDetailActivity"
             android:screenOrientation="portrait" />
 

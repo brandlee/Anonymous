@@ -12,6 +12,7 @@ import com.brandlee.anonymous.common.BaseActivity;
 import com.brandlee.anonymous.common.BaseToolbarWrapper;
 import com.brandlee.anonymous.common.widget.passwordinputdialog.PassWordDialog;
 import com.brandlee.anonymous.common.widget.passwordinputdialog.impl.DialogCompleteListener;
+import com.brandlee.anonymous.entities.OrderEntity;
 
 /**
  * @Description:
@@ -47,11 +48,11 @@ public class PayActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 new PassWordDialog(PayActivity.this).setTitle("请输入交易密码")
-                        .setSubTitle("到账金额(元)")
-                        .setMoney("100.00").setCompleteListener(new DialogCompleteListener() {
+                        .setMoney(mMoneyEditText.getText().toString()).setCompleteListener(new DialogCompleteListener() {
                     @Override
                     public void dialogCompleteListener(String money, String pwd) {
                         Toast.makeText(PayActivity.this, "支付成功", Toast.LENGTH_SHORT).show();
+                        startActivity(OrderDetailActivity.getItent(PayActivity.this, OrderEntity.TYPE_COMPLETE));
                     }
                 }).show();
             }

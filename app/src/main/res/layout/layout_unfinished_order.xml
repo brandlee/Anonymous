@@ -79,6 +79,7 @@
                 android:textSize="12sp" />
 
             <TextView
+                android:id="@+id/tv_complete_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
@@ -88,6 +89,7 @@
         </LinearLayout>
 
         <ImageView
+            android:id="@+id/iv_order_status"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|right"

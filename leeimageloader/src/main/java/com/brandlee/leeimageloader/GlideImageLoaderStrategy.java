@@ -1,5 +1,6 @@
 package com.brandlee.leeimageloader;
 
+import android.net.Uri;
 import android.support.annotation.IdRes;
 import android.widget.ImageView;
 
@@ -19,6 +20,16 @@ public class GlideImageLoaderStrategy implements BaseImageLoaderStrategy {
     public void loadImage(ImageView imageView, String url) {
         Glide.with(imageView.getContext())
                 .load(url)
+                .dontAnimate()
+                .placeholder(imageView.getDrawable())
+                .diskCacheStrategy(DiskCacheStrategy.SOURCE)
+                .into(imageView);
+    }
+
+    @Override
+    public void loadImage(ImageView imageView, Uri uri) {
+        Glide.with(imageView.getContext())
+                .load(uri)
                 .dontAnimate()
                 .placeholder(imageView.getDrawable())
                 .diskCacheStrategy(DiskCacheStrategy.SOURCE)
