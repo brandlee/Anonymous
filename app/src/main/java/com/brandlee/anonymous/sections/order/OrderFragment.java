@@ -85,5 +85,6 @@ public class OrderFragment extends Fragment {
         mTabLayout.setViewPager(mViewPager);
 
         mTabLayout.showDot(1);
+        mTabLayout.setMsgMargin(1,30f,0f);
     }
 }

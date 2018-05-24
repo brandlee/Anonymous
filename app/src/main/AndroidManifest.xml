@@ -92,6 +92,30 @@
         <activity
             android:name=".sections.about.ContactInfoActivity"
             android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".sections.login.LoginSplashActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".sections.login.LoginActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".sections.login.RegisterActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".sections.login.RegisterStepTwoActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".sections.login.FindLoginPasswordActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".sections.login.FindLoginPasswordStepTwoActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

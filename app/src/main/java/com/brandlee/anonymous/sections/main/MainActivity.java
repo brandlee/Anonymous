@@ -1,11 +1,15 @@
 package com.brandlee.anonymous.sections.main;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 
 import com.brandlee.anonymous.R;
 import com.brandlee.anonymous.common.BaseActivity;
 import com.brandlee.anonymous.common.widget.SlidableViewPager;
+import com.brandlee.anonymous.sections.login.LoginSplashActivity;
+import com.brandlee.anonymous.utils.Constant;
+import com.brandlee.anonymous.utils.SharedPrefsUtils;
 import com.brandlee.leeimageloader.GlideImageLoaderStrategy;
 import com.brandlee.leeimageloader.ImageLoaderManager;
 import com.flyco.tablayout.CommonTabLayout;
@@ -36,6 +40,11 @@ public class MainActivity extends BaseActivity {
         ImageLoaderManager.getInstance().setImageLoaderStrategy(new GlideImageLoaderStrategy());
 
         initTabs();
+
+        boolean loginStatus = SharedPrefsUtils.getBooleanPreference(this, Constant.LOGIN_STATUS, false);
+        if (!loginStatus) {
+            startActivity(new Intent(MainActivity.this, LoginSplashActivity.class));
+        }
     }
 
     private void initTabs() {

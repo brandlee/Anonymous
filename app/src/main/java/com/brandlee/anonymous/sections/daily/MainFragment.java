@@ -11,6 +11,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.brandlee.anonymous.R;
+import com.brandlee.anonymous.common.widget.NumberRunningTextView;
 import com.brandlee.anonymous.sections.setting.AuthorizationActivity;
 import com.flyco.dialog.listener.OnOperItemClickL;
 import com.flyco.dialog.widget.ActionSheetDialog;
@@ -25,6 +26,8 @@ public class MainFragment extends Fragment {
 
     private TextView mToSeeTextView;
     private LinearLayout mStatusContainerLayout;
+
+    private NumberRunningTextView tv_number;
 
     public MainFragment() {
         // Required empty public constructor
@@ -64,6 +67,9 @@ public class MainFragment extends Fragment {
         mStatusContainerLayout = view.findViewById(R.id.ll_container);
         mStatusContainerLayout.removeAllViews();
         mStatusContainerLayout.addView(View.inflate(getContext(), R.layout.layout_apply_page, null));
+
+        tv_number=view.findViewById(R.id.tv_number);
+        tv_number.setContent("80,000.00");
         return view;
     }
 
