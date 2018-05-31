@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -15,6 +16,8 @@ import com.brandlee.anonymous.common.widget.NumberRunningTextView;
 import com.brandlee.anonymous.sections.setting.AuthorizationActivity;
 import com.flyco.dialog.listener.OnOperItemClickL;
 import com.flyco.dialog.widget.ActionSheetDialog;
+
+import org.kymjs.chat.ChatActivity;
 
 public class MainFragment extends Fragment {
     private static final String TAG = "MainFragment";
@@ -28,6 +31,9 @@ public class MainFragment extends Fragment {
     private LinearLayout mStatusContainerLayout;
 
     private NumberRunningTextView tv_number;
+
+    private ImageView iv_massage;
+    private ImageView iv_service;
 
     public MainFragment() {
         // Required empty public constructor
@@ -68,8 +74,24 @@ public class MainFragment extends Fragment {
         mStatusContainerLayout.removeAllViews();
         mStatusContainerLayout.addView(View.inflate(getContext(), R.layout.layout_apply_page, null));
 
-        tv_number=view.findViewById(R.id.tv_number);
+        tv_number = view.findViewById(R.id.tv_number);
         tv_number.setContent("80,000.00");
+
+        iv_massage = view.findViewById(R.id.iv_massage);
+        iv_service = view.findViewById(R.id.iv_service);
+
+        iv_massage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), MessageActivity.class));
+            }
+        });
+        iv_service.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), ChatActivity.class));
+            }
+        });
         return view;
     }
 

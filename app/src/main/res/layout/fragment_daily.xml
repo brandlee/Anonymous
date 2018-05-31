@@ -32,12 +32,14 @@
                     android:layout_weight="1" />
 
                 <ImageView
+                    android:id="@+id/iv_massage"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="8dp"
                     android:src="@drawable/icon_home_email" />
 
                 <ImageView
+                    android:id="@+id/iv_service"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="8dp"

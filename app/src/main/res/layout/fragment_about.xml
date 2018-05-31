@@ -120,6 +120,7 @@
                 android:background="#FFE0E0E0" />
 
             <LinearLayout
+                android:id="@+id/ll_shop"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_item_selector"
@@ -169,6 +170,7 @@
                 android:background="#FFE0E0E0" />
 
             <LinearLayout
+                android:id="@+id/ll_bank_card"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_item_selector"
@@ -218,6 +220,7 @@
                 android:background="#FFE0E0E0" />
 
             <LinearLayout
+                android:id="@+id/ll_invite_profit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_item_selector"
@@ -265,6 +268,7 @@
                 android:background="#FFFAFAFA" />
 
             <LinearLayout
+                android:id="@+id/ll_customer_manager"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_item_selector"
@@ -314,6 +318,7 @@
                 android:background="#FFE0E0E0" />
 
             <LinearLayout
+                android:id="@+id/ll_online_service"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_item_selector"

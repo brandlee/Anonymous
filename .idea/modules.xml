@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Anonymous.iml" filepath="$PROJECT_DIR$/Anonymous.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chat/chat.iml" filepath="$PROJECT_DIR$/chat/chat.iml" />
       <module fileurl="file://$PROJECT_DIR$/leeimageloader/leeimageloader.iml" filepath="$PROJECT_DIR$/leeimageloader/leeimageloader.iml" />
       <module fileurl="file://$PROJECT_DIR$/leenetwork/leenetwork.iml" filepath="$PROJECT_DIR$/leenetwork/leenetwork.iml" />
     </modules>

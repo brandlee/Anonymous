@@ -13,6 +13,8 @@ import com.brandlee.anonymous.common.BaseFragment;
 import com.brandlee.anonymous.common.BaseToolbarWrapper;
 import com.brandlee.anonymous.sections.setting.SettingActivity;
 
+import org.kymjs.chat.ChatActivity;
+
 /**
  * iPhone 8 Copy 24
  */
@@ -25,6 +27,11 @@ public class AboutFragment extends BaseFragment {
 
     private BaseToolbarWrapper mToolbar;
     private LinearLayout mCreditManageLayout;
+    private LinearLayout ll_shop;
+    private LinearLayout ll_bank_card;
+    private LinearLayout ll_invite_profit;
+    private LinearLayout ll_customer_manager;
+    private LinearLayout ll_online_service;
 
     public AboutFragment() {
         // Required empty public constructor
@@ -61,10 +68,51 @@ public class AboutFragment extends BaseFragment {
         initToolbar();
 
         mCreditManageLayout = view.findViewById(R.id.ll_credit_manage);
+        ll_shop = view.findViewById(R.id.ll_shop);
+        ll_bank_card = view.findViewById(R.id.ll_bank_card);
+        ll_invite_profit = view.findViewById(R.id.ll_invite_profit);
+        ll_customer_manager = view.findViewById(R.id.ll_customer_manager);
+        ll_online_service = view.findViewById(R.id.ll_online_service);
+
         mCreditManageLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getContext(), CreditManagementActivity.class));
+            }
+        });
+
+        ll_shop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), ShopListActivity.class));
+            }
+        });
+
+        ll_bank_card.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), BanCardListActivity.class));
+            }
+        });
+
+        ll_invite_profit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), InviteProfitActivity.class));
+            }
+        });
+
+        ll_customer_manager.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        ll_online_service.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), ChatActivity.class));
             }
         });
     }

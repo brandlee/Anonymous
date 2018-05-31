@@ -1,1 +1,1 @@
-include ':app', ':leenetwork', ':leeimageloader'
+include ':app', ':leenetwork', ':leeimageloader','chat'

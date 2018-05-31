@@ -14,6 +14,7 @@ import com.brandlee.anonymous.R;
 import com.brandlee.anonymous.common.BaseActivity;
 import com.brandlee.anonymous.common.BaseToolbarWrapper;
 import com.brandlee.leeimageloader.ImageLoaderManager;
+import com.cretin.www.externalmaputilslibrary.OpenExternalMapAppUtils;
 import com.jzxiang.pickerview.TimePickerDialog;
 import com.jzxiang.pickerview.data.Type;
 import com.jzxiang.pickerview.listener.OnDateSetListener;
@@ -38,6 +39,7 @@ public class ShopInfoActivity extends BaseActivity {
 
     private BaseToolbarWrapper mToolbar;
     private TextView tv_time_picker;
+    private TextView tv_shop_address;
 
     private LinearLayout mPositiveIDCardLayout;
     private LinearLayout mNegativeIDCardLayout;
@@ -62,6 +64,7 @@ public class ShopInfoActivity extends BaseActivity {
         initToolbar();
 
         tv_time_picker = findViewById(R.id.tv_time_picker);
+        tv_shop_address = findViewById(R.id.tv_shop_address);
 
         tv_time_picker.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -80,6 +83,13 @@ public class ShopInfoActivity extends BaseActivity {
                         .setThemeColor(getResources().getColor(R.color.select_tab_text))
                         .build();
                 mDialogYearMonthDay.show(getSupportFragmentManager(), "year_month_day");
+            }
+        });
+
+        tv_shop_address.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                OpenExternalMapAppUtils.openMapMarker(ShopInfoActivity.this, "113.933012", "22.538673", "title", "content", "sunny",false,true);
             }
         });
 
