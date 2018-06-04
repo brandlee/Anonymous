@@ -10,7 +10,9 @@
         android:background="@color/white"
         android:orientation="vertical">
 
-        <include layout="@layout/layout_home_order" />
+        <include
+            android:id="@+id/layout_home_order_one"
+            layout="@layout/layout_home_order" />
 
         <View
             android:layout_width="match_parent"
@@ -19,6 +21,8 @@
             android:layout_marginRight="16dp"
             android:background="#FFE0E0E0" />
 
-        <include layout="@layout/layout_home_order" />
+        <include
+            android:id="@+id/layout_home_order_two"
+            layout="@layout/layout_home_order_two" />
     </LinearLayout>
 </LinearLayout>

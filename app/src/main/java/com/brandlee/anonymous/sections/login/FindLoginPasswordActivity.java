@@ -1,6 +1,7 @@
 package com.brandlee.anonymous.sections.login;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.annotation.Nullable;
@@ -10,6 +11,8 @@ import android.widget.TextView;
 import com.brandlee.anonymous.R;
 import com.brandlee.anonymous.common.BaseActivity;
 import com.brandlee.anonymous.common.BaseToolbarWrapper;
+import com.flyco.dialog.listener.OnBtnClickL;
+import com.flyco.dialog.widget.MaterialDialog;
 
 /**
  * @Description:
@@ -21,6 +24,7 @@ public class FindLoginPasswordActivity extends BaseActivity {
 
     private TextView mSendCodeTextView;
     private TextView mConfirmTextView;
+    private TextView tv_service;
 
     private MyCountDownTimer countDownTimer;  // 倒计时器
 
@@ -38,6 +42,7 @@ public class FindLoginPasswordActivity extends BaseActivity {
         });
 
         mConfirmTextView = findViewById(R.id.tv_confirm);
+        tv_service = findViewById(R.id.tv_service);
         mConfirmTextView.setText("下一步");
         mConfirmTextView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,12 +51,38 @@ public class FindLoginPasswordActivity extends BaseActivity {
                 finish();
             }
         });
+
+        tv_service.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final MaterialDialog materialDialog = new MaterialDialog(FindLoginPasswordActivity.this);
+                materialDialog.content("400-111-2345")
+                        .btnText("放弃", "拨打")
+                        .show();
+                materialDialog.setOnBtnClickL(
+                        new OnBtnClickL() {
+                            @Override
+                            public void onBtnClick() {
+                                materialDialog.dismiss();
+                            }
+                        },
+                        new OnBtnClickL() {
+                            @Override
+                            public void onBtnClick() {
+                                Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + "400-111-2345"));
+                                startActivity(intent);
+                                materialDialog.dismiss();
+                            }
+                        });
+            }
+        });
+
         initToolbar();
     }
 
     private void initToolbar() {
         mToolbar = new BaseToolbarWrapper(findViewById(R.id.toolbar));
-        mToolbar.setTitle("更改登录密码");
+        mToolbar.setTitle("找回登录密码");
         mToolbar.viewRight.setVisibility(View.GONE);
         mToolbar.viewLeft.setOnClickListener(new View.OnClickListener() {
             @Override

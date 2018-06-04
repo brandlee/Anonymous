@@ -6,6 +6,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -46,6 +47,16 @@ public class ShopInfoActivity extends BaseActivity {
     private LinearLayout mHoldIDCardLayout;
     private LinearLayout mYingYeIDCardLayout;
 
+    private FrameLayout fl_yancao;
+    private FrameLayout fl_diannei;
+    private FrameLayout fl_dianwai;
+    private FrameLayout fl_yingye;
+
+    private TextView tv_yancao;
+    private TextView tv_diannei;
+    private TextView tv_dianwai;
+    private TextView tv_yingye;
+
     private ImageView mPositiveIDCardImageView;
     private ImageView mNegativeIDCardImageView;
     private ImageView mHoldIDCardImageView;
@@ -62,6 +73,16 @@ public class ShopInfoActivity extends BaseActivity {
         setContentView(R.layout.activity_shop_info);
 
         initToolbar();
+
+        fl_yancao = findViewById(R.id.fl_yancao);
+        fl_diannei = findViewById(R.id.fl_diannei);
+        fl_dianwai = findViewById(R.id.fl_dianwai);
+        fl_yingye = findViewById(R.id.fl_yingye);
+
+        tv_yancao = findViewById(R.id.tv_yancao);
+        tv_diannei = findViewById(R.id.tv_diannei);
+        tv_dianwai = findViewById(R.id.tv_dianwai);
+        tv_yingye = findViewById(R.id.tv_yingye);
 
         tv_time_picker = findViewById(R.id.tv_time_picker);
         tv_shop_address = findViewById(R.id.tv_shop_address);
@@ -89,7 +110,7 @@ public class ShopInfoActivity extends BaseActivity {
         tv_shop_address.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                OpenExternalMapAppUtils.openMapMarker(ShopInfoActivity.this, "113.933012", "22.538673", "title", "content", "sunny",false,true);
+                OpenExternalMapAppUtils.openMapMarker(ShopInfoActivity.this, "113.933012", "22.538673", "title", "content", "sunny", false, true);
             }
         });
 
@@ -184,21 +205,29 @@ public class ShopInfoActivity extends BaseActivity {
             List<Uri> uris = Matisse.obtainResult(data);
             mAddPositiveIDCardImageView.setVisibility(View.GONE);
             mPositiveIDCardImageView.setVisibility(View.VISIBLE);
+            fl_yancao.setVisibility(View.VISIBLE);
+            tv_yancao.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.icon_green_hook_small, 0);
             ImageLoaderManager.getInstance().loadImage(mPositiveIDCardImageView, uris.get(0));
         } else if (requestCode == REQUEST_CODE_CHOOSE_NEGATIVE && resultCode == RESULT_OK) {
             List<Uri> uris = Matisse.obtainResult(data);
             mAddNegativeIDCardImageView.setVisibility(View.GONE);
             mNegativeIDCardImageView.setVisibility(View.VISIBLE);
+            fl_diannei.setVisibility(View.VISIBLE);
+            tv_diannei.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.icon_green_hook_small, 0);
             ImageLoaderManager.getInstance().loadImage(mNegativeIDCardImageView, uris.get(0));
         } else if (requestCode == REQUEST_CODE_CHOOSE_HOLD && resultCode == RESULT_OK) {
             List<Uri> uris = Matisse.obtainResult(data);
             mAddHoldIDCardImageView.setVisibility(View.GONE);
             mHoldIDCardImageView.setVisibility(View.VISIBLE);
+            fl_dianwai.setVisibility(View.VISIBLE);
+            tv_dianwai.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.icon_green_hook_small, 0);
             ImageLoaderManager.getInstance().loadImage(mHoldIDCardImageView, uris.get(0));
         } else if (requestCode == REQUEST_CODE_CHOOSE_YINGYE && resultCode == RESULT_OK) {
             List<Uri> uris = Matisse.obtainResult(data);
             mAddYingYeIDCardImageView.setVisibility(View.GONE);
             mYingYeCardImageView.setVisibility(View.VISIBLE);
+            fl_yingye.setVisibility(View.VISIBLE);
+            tv_yingye.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.icon_green_hook_small, 0);
             ImageLoaderManager.getInstance().loadImage(mHoldIDCardImageView, uris.get(0));
         }
     }

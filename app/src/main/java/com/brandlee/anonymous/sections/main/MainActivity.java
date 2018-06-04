@@ -47,6 +47,10 @@ public class MainActivity extends BaseActivity {
         }
     }
 
+    public void jumpToOrderList() {
+        mVPContent.setCurrentItem(1);
+    }
+
     private void initTabs() {
         for (int i = 0; i < sTabTitles.length; i++) {
             mTabEntities.add(new TabEntity(sTabTitles[i], mIconSelectIds[i], mIconUnselectIds[i]));

@@ -1,5 +1,7 @@
 package com.brandlee.anonymous.sections.order;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -9,6 +11,8 @@ import com.brandlee.anonymous.R;
 import com.brandlee.anonymous.common.BaseWrapper;
 import com.brandlee.anonymous.common.widget.ExpandAnimation;
 import com.brandlee.anonymous.entities.OrderEntity;
+import com.flyco.dialog.listener.OnBtnClickL;
+import com.flyco.dialog.widget.MaterialDialog;
 
 /**
  * @Description:
@@ -22,6 +26,7 @@ public class UnfinishedOrderWrapper extends BaseWrapper {
     public ImageView iv_order_status;
     public LinearLayout mOrderGenerateInfoLayout;
     public LinearLayout mOrderConfirmInfoLayout;
+    public TextView mServiceTextView;
 
     public UnfinishedOrderWrapper(View view, int orderType) {
         super(view);
@@ -52,6 +57,32 @@ public class UnfinishedOrderWrapper extends BaseWrapper {
             public void onClick(View v) {
                 ExpandAnimation animation = new ExpandAnimation(mConfirmCollapse, mOrderConfirmInfoLayout, 500);
                 mOrderConfirmInfoLayout.startAnimation(animation);
+            }
+        });
+
+        mServiceTextView = view.findViewById(R.id.tv_service);
+        mServiceTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final MaterialDialog materialDialog = new MaterialDialog(mContext);
+                materialDialog.content("400-111-2345")
+                        .btnText("放弃", "拨打")
+                        .show();
+                materialDialog.setOnBtnClickL(
+                        new OnBtnClickL() {
+                            @Override
+                            public void onBtnClick() {
+                                materialDialog.dismiss();
+                            }
+                        },
+                        new OnBtnClickL() {
+                            @Override
+                            public void onBtnClick() {
+                                Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + "400-111-2345"));
+                                mContext.startActivity(intent);
+                                materialDialog.dismiss();
+                            }
+                        });
             }
         });
     }

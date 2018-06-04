@@ -22,7 +22,15 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="4dp"
-        android:text="您需要进行新商盟授权后即可使用信用服务/n马上授权？"
+        android:text="您需要进行新商盟授权后即可使用信用服务"
+        android:textColor="#FF9B9B9B"
+        android:textSize="12sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="马上授权？"
         android:textColor="#FF9B9B9B"
         android:textSize="12sp" />
 

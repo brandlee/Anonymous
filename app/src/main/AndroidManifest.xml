@@ -75,7 +75,8 @@
 
         <activity
             android:name=".sections.about.ShopInfoActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
 
         <activity
             android:name=".sections.about.BankCardInfoActivity"
@@ -87,7 +88,8 @@
 
         <activity
             android:name=".sections.about.IdentityVerifyActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
 
         <activity
             android:name=".sections.about.ContactInfoActivity"

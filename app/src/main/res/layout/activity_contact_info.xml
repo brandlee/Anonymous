@@ -15,15 +15,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingBottom="16dp"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
-        android:paddingTop="16dp">
+        android:paddingLeft="16dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="注册号"
+            android:text="联系人信息"
             android:textColor="#FF212121"
             android:textSize="14sp" />
 
@@ -32,9 +29,13 @@
             android:layout_height="wrap_content"
             android:layout_weight="1" />
 
-        <TextView
-            android:layout_width="wrap_content"
+        <EditText
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
+            android:background="@null"
+            android:gravity="right"
+            android:includeFontPadding="false"
+            android:padding="16dp"
             android:text="王二"
             android:textColor="#FF212121"
             android:textSize="14sp" />
@@ -56,7 +57,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="到期日"
+            android:text="联系人手机号"
             android:textColor="#FF212121"
             android:textSize="14sp" />
 
@@ -65,14 +66,15 @@
             android:layout_height="wrap_content"
             android:layout_weight="1" />
 
-        <TextView
-            android:id="@+id/tv_relation"
-            android:layout_width="wrap_content"
+        <EditText
+            android:layout_width="120dp"
             android:layout_height="wrap_content"
-            android:gravity="center"
+            android:background="@null"
+            android:gravity="right"
             android:includeFontPadding="false"
+            android:inputType="phone"
             android:padding="16dp"
-            android:text="1937504950803"
+            android:text="13683331455"
             android:textColor="#FF212121"
             android:textSize="14sp" />
     </LinearLayout>
@@ -93,7 +95,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="法人姓名"
+            android:text="与申请人关系"
             android:textColor="#FF212121"
             android:textSize="14sp" />
 

@@ -3,10 +3,12 @@ package com.brandlee.anonymous.sections.login;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.brandlee.anonymous.R;
 import com.brandlee.anonymous.common.BaseActivity;
@@ -57,6 +59,18 @@ public class RegisterStepTwoActivity extends BaseActivity {
         tv_to_register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (TextUtils.isEmpty(et_phone_number.getText())) {
+                    Toast.makeText(RegisterStepTwoActivity.this, "请输入烟草证号", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if (TextUtils.isEmpty(et_invite_code.getText())) {
+                    Toast.makeText(RegisterStepTwoActivity.this, "请输入邀请码", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if (TextUtils.isEmpty(et_password.getText())) {
+                    Toast.makeText(RegisterStepTwoActivity.this, "请输入密码", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 startActivity(new Intent(RegisterStepTwoActivity.this, LoginActivity.class));
             }
         });

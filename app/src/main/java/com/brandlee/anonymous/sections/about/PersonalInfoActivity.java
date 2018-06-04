@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -37,9 +38,17 @@ public class PersonalInfoActivity extends BaseActivity {
     private TextView mRelationTextView;
     private TextView mMarriageTextView;
 
+    private TextView tv_positive;
+    private TextView tv_negative;
+    private TextView tv_hold;
+
     private LinearLayout mPositiveIDCardLayout;
     private LinearLayout mNegativeIDCardLayout;
     private LinearLayout mHoldIDCardLayout;
+
+    private FrameLayout fl_positive_success;
+    private FrameLayout fl_negative_success;
+    private FrameLayout fl_hold_success;
 
     private ImageView mPositiveIDCardImageView;
     private ImageView mNegativeIDCardImageView;
@@ -59,9 +68,17 @@ public class PersonalInfoActivity extends BaseActivity {
         mRelationTextView = findViewById(R.id.tv_relation);
         mMarriageTextView = findViewById(R.id.tv_marriage);
 
+        tv_positive = findViewById(R.id.tv_positive);
+        tv_negative = findViewById(R.id.tv_negative);
+        tv_hold = findViewById(R.id.tv_hold);
+
         mPositiveIDCardLayout = findViewById(R.id.ll_positive_id_card);
         mNegativeIDCardLayout = findViewById(R.id.ll_negative_id_card);
         mHoldIDCardLayout = findViewById(R.id.ll_hand_id_card);
+
+        fl_positive_success = findViewById(R.id.fl_positive_success);
+        fl_negative_success = findViewById(R.id.fl_negative_success);
+        fl_hold_success = findViewById(R.id.fl_hold_success);
 
         mPositiveIDCardImageView = findViewById(R.id.iv_positive_id_card);
         mNegativeIDCardImageView = findViewById(R.id.iv_negative_id_card);
@@ -139,16 +156,22 @@ public class PersonalInfoActivity extends BaseActivity {
             List<Uri> uris = Matisse.obtainResult(data);
             mAddPositiveIDCardImageView.setVisibility(View.GONE);
             mPositiveIDCardImageView.setVisibility(View.VISIBLE);
+            fl_positive_success.setVisibility(View.VISIBLE);
+            tv_positive.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.icon_green_hook_small, 0);
             ImageLoaderManager.getInstance().loadImage(mPositiveIDCardImageView, uris.get(0));
         } else if (requestCode == REQUEST_CODE_CHOOSE_NEGATIVE && resultCode == RESULT_OK) {
             List<Uri> uris = Matisse.obtainResult(data);
             mAddNegativeIDCardImageView.setVisibility(View.GONE);
             mNegativeIDCardImageView.setVisibility(View.VISIBLE);
+            fl_negative_success.setVisibility(View.VISIBLE);
+            tv_negative.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.icon_green_hook_small, 0);
             ImageLoaderManager.getInstance().loadImage(mNegativeIDCardImageView, uris.get(0));
         } else if (requestCode == REQUEST_CODE_CHOOSE_HOLD && resultCode == RESULT_OK) {
             List<Uri> uris = Matisse.obtainResult(data);
             mAddHoldIDCardImageView.setVisibility(View.GONE);
             mHoldIDCardImageView.setVisibility(View.VISIBLE);
+            fl_hold_success.setVisibility(View.VISIBLE);
+            tv_hold.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.icon_green_hook_small, 0);
             ImageLoaderManager.getInstance().loadImage(mHoldIDCardImageView, uris.get(0));
         }
     }

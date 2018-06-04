@@ -2,6 +2,7 @@ package com.brandlee.anonymous.sections.order;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -47,8 +48,25 @@ public class PayActivity extends BaseActivity {
         mPayTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String money = mMoneyEditText.getText().toString();
+                if (TextUtils.isEmpty(money)) {
+                    Toast.makeText(PayActivity.this, "请输入支付金额", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                if (Float.valueOf(money) < 23.0) {
+                    Toast.makeText(PayActivity.this, "低于最低支付金额，请重新输入", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                if (Float.valueOf(money) > 3000.0) {
+                    Toast.makeText(PayActivity.this, "超出待支付金额，请重新输入", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+
                 new PassWordDialog(PayActivity.this).setTitle("请输入交易密码")
-                        .setMoney(mMoneyEditText.getText().toString()).setCompleteListener(new DialogCompleteListener() {
+                        .setMoney(money).setCompleteListener(new DialogCompleteListener() {
                     @Override
                     public void dialogCompleteListener(String money, String pwd) {
                         Toast.makeText(PayActivity.this, "支付成功", Toast.LENGTH_SHORT).show();

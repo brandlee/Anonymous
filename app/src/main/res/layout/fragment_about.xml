@@ -24,13 +24,16 @@
                 android:paddingTop="24dp">
 
                 <ImageView
+                    android:id="@+id/iv_avatar"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_gravity="center_horizontal"
-                    android:background="#FFE0E0E0"
+                    android:background="@drawable/shape_gray_circle"
+                    android:scaleType="centerInside"
                     android:src="@drawable/icon_default_user_avatar" />
 
                 <TextView
+                    android:id="@+id/tv_user_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
@@ -40,23 +43,32 @@
                     android:textSize="14sp" />
 
                 <LinearLayout
+                    android:id="@+id/ll_code"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
+                    android:gravity="center"
                     android:orientation="horizontal">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
+                        android:layout_gravity="center_vertical"
                         android:text="邀请码：184750"
                         android:textColor="#FF757575"
                         android:textSize="12sp" />
 
                     <TextView
+                        android:id="@+id/tv_copy"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="6dp"
+                        android:background="@drawable/shape_gray_border_radius_0"
+                        android:includeFontPadding="false"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
+                        android:paddingTop="2dp"
                         android:text="复制"
                         android:textColor="#FF757575"
                         android:textSize="12sp" />

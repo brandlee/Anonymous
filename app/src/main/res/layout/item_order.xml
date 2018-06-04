@@ -2,6 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:background="@color/white"
     android:orientation="vertical"
     android:paddingBottom="10dp"
     android:paddingLeft="16dp"
@@ -25,6 +27,7 @@
             android:textSize="12sp" />
 
         <TextView
+            android:id="@+id/tv_company"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="4dp"
@@ -67,8 +70,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:paddingBottom="4dp"
             android:includeFontPadding="false"
+            android:paddingBottom="4dp"
             android:text="/10000.00"
             android:textColor="#FF212121"
             android:textSize="12sp" />

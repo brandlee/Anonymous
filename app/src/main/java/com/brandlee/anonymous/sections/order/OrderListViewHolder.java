@@ -31,14 +31,16 @@ public class OrderListViewHolder extends BaseViewHolder<OrderEntity> {
             itemView.setTag(orderEntity.orderType);
             if (orderEntity.orderType == OrderEntity.TYPE_WAIT_CONFIRM) {
                 setText(R.id.tv_order_status, "待确认");
+                setVisible(R.id.tv_company, false);
                 setVisible(R.id.tv_due, false);
                 setVisible(R.id.tv_due_date, false);
-                setVisible(R.id.tv_total,false);
+                setVisible(R.id.tv_total, false);
             } else if (orderEntity.orderType == OrderEntity.TYPE_WAIT_PAY) {
                 setText(R.id.tv_order_status, "待支付");
+                setVisible(R.id.tv_company, false);
                 setVisible(R.id.tv_due, true);
                 setVisible(R.id.tv_due_date, true);
-                setVisible(R.id.tv_total,true);
+                setVisible(R.id.tv_total, true);
             }
         }
     }

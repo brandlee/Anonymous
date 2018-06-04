@@ -287,7 +287,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingTop="4dp"
-                        android:text="账单信息－"
+                        android:text="订单信息－"
                         android:textColor="#FF212121"
                         android:textSize="12sp" />
 
@@ -299,7 +299,7 @@
                         android:drawablePadding="4dp"
                         android:drawableRight="@drawable/icon_arrow_down_small"
                         android:paddingTop="4dp"
-                        android:text="账单编号：28649029890"
+                        android:text="订单编号：28649029890"
                         android:textColor="#FF9B9B9B"
                         android:textSize="12sp" />
                 </LinearLayout>
@@ -311,6 +311,31 @@
             </LinearLayout>
         </LinearLayout>
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginBottom="12dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:text="对该笔订单有疑问？立即联系"
+            android:textColor="#FF9B9B9B"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:text="客服人员"
+            android:textColor="#FF3D93D0"
+            android:textSize="12sp" />
     </LinearLayout>
 
     <android.support.v4.widget.Space
